@@ -132,6 +132,41 @@ The program will:
 - Matplotlib
 - yFinance API
 
+## Project Workflow
+
+The script follows the following workflow:
+
+1. Download historical price data using the yfinance API  
+2. Calculate log returns for each asset  
+3. Compute financial risk metrics (volatility, Sharpe ratio, VaR, etc.)  
+4. Analyze correlations between assets  
+5. Measure downside risk using drawdown analysis  
+6. Generate visualizations to illustrate market risk behavior
+
+---
+## Example Output
+
+The script prints a table of financial risk metrics including:
+
+- Annual Return
+- Annual Volatility
+- Sharpe Ratio
+- Skewness
+- Kurtosis
+- Maximum Drawdown
+
+It also generates visualizations for:
+
+- Rolling volatility
+- Drawdown over time
+- Return distribution
+
+## Author
+
+Wilson Dhana Marthen
+
+This project was created as a learning exercise in quantitative finance and financial data analysis using Python.
+
 ---
 
 ## Project Purpose
