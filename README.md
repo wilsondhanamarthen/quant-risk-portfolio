@@ -1,183 +1,117 @@
-# Quantitative Market Risk Analysis
+# 📈 Quant Portfolio Analysis
 
-This project performs a quantitative risk analysis on major U.S. equities using Python.  
-The script retrieves historical market data and computes several financial risk metrics commonly used in quantitative finance and portfolio management.
-
-## Assets Analyzed
-
-- SPY (S&P 500 ETF)
-- AAPL (Apple)
-- MSFT (Microsoft)
-- GOOGL (Alphabet)
-- AMZN (Amazon)
-
-Historical data is obtained using the **yfinance API**.
+Quantitative risk and performance analysis of U.S. equities using Python.
+Built to analyze, backtest, and optimize a portfolio of major stocks
+using real financial mathematics.
 
 ---
 
-## Financial Concepts Used
+## 🔍 Overview
 
-This project implements several core financial risk metrics commonly used in quantitative finance and portfolio risk analysis.
+This project performs a full quantitative risk analysis on 5 major U.S. equities:
+**SPY, AAPL, MSFT, GOOGL, AMZN** using daily price data from 2015 to 2024.
 
-- **Log Returns** — Measures continuous asset returns and is widely used in financial modeling.
-
-- **Annual Return** — Scales the average daily return to yearly performance.
-
-- **Annual Volatility** — Measures the dispersion of returns and represents market risk.
-
-- **Sharpe Ratio** — Evaluates risk-adjusted return by comparing return to volatility.
-
-- **Skewness** — Measures asymmetry in the return distribution.
-
-- **Kurtosis** — Measures the presence of extreme values (fat tails) in returns.
-
-- **Value at Risk (VaR)** — Estimates potential losses at a given confidence level (95% in this project).
-
-- **Maximum Drawdown** — Measures the largest peak-to-trough decline in cumulative returns.
-
-- **Rolling Volatility** — Tracks how volatility evolves over time using moving windows.
-
-- **Correlation Matrix** — Measures how assets move relative to each other and helps analyze diversification within a portfolio.
+It goes beyond simple analysis by implementing a **momentum trading strategy backtest**
+and a **minimum variance portfolio optimizer** — core concepts in quantitative finance.
 
 ---
 
-## Key Calculations
+## 📊 Features
 
-### Log Returns
-
-Log returns are calculated as:
-r_t = ln(P_t / P_(t-1))
-
-
-Log returns are widely used in financial modeling because they are **time-additive and statistically convenient**.
-
----
-
-### Annual Return
-
-Annual return is calculated by scaling the average daily return:
-Annual Return = Mean Daily Return × 252
-
-
-(252 trading days per year)
+- **Risk Metrics** — Sharpe ratio (with risk-free rate), annualized return & volatility, skewness, kurtosis
+- **Value at Risk** — Both Historical VaR and Parametric VaR at 95% confidence
+- **Drawdown Analysis** — Rolling max drawdown over the full period
+- **Rolling Volatility** — 30-day and 90-day annualized rolling volatility
+- **Momentum Strategy Backtest** — Signal-based strategy vs Buy & Hold SPY comparison
+- **Minimum Variance Portfolio** — Scipy optimization to find lowest-risk asset allocation
+- **Interactive Charts** — All 8 visualizations built with Plotly (dark theme, hover, zoom)
 
 ---
 
-### Annual Volatility
+## 📁 Project Structure
 
-Volatility measures the dispersion of returns and represents market risk:
-Annual Volatility = Daily Standard Deviation × √252
-
-
----
-
-### Sharpe Ratio
-
-The Sharpe Ratio measures **risk-adjusted performance**:
-Sharpe Ratio = Annual Return / Annual Volatility
-
-Higher Sharpe ratios indicate better returns relative to risk.
+```
+quant-portfolio-analysis/
+├── main.py              # Entry point — runs everything
+├── data.py              # Downloads and processes price data
+├── metrics.py           # Computes all risk & performance metrics
+├── strategy.py          # Momentum backtest + portfolio optimization
+├── visualizations.py    # All 8 interactive Plotly charts
+└── requirements.txt     # Dependencies
+```
 
 ---
 
-### Value at Risk (VaR)
+## 📉 Key Findings (2015–2024)
 
-Value at Risk estimates the potential loss at a given confidence level.
+| Ticker | Annual Return | Sharpe Ratio | Max Drawdown |
+|--------|--------------|--------------|--------------|
+| AAPL   | 24.4%        | 0.698        | -45.9%       |
+| AMZN   | 23.3%        | 0.561        | -61.9%       |
+| MSFT   | 19.3%        | 0.561        | -40.6%       |
+| SPY    | 12.8%        | 0.457        | -35.8%       |
+| GOOGL  | 16.7%        | 0.428        | -47.9%       |
 
-This project calculates **95% daily VaR**, which represents the 5th percentile of returns.
+**Momentum Strategy vs Buy & Hold SPY:**
 
-Example interpretation:
+| Strategy | Sharpe Ratio | Max Drawdown |
+|----------|--------------|--------------|
+| Buy & Hold SPY | 0.457 | -35.8% |
+| Momentum Strategy | 0.323 | -13.6% |
 
-> A VaR of -2.7% means there is a 5% probability that the asset loses more than 2.7% in a single day.
-
----
-
-### Maximum Drawdown
-
-Maximum drawdown measures the largest peak-to-trough loss in cumulative returns.
-
-This metric is commonly used by portfolio managers to assess downside risk.
-
----
-
-## Visualizations
-
-The script generates several plots:
-
-- Rolling Volatility (30-day and 90-day)
-- Drawdown Over Time
-- Distribution of Returns
-
-These visualizations help illustrate how risk evolves over time.
+> The momentum strategy underperforms on raw returns but significantly
+> reduces drawdown — showing the classic risk/return tradeoff in action.
 
 ---
 
-## Installation
+## 🚀 Getting Started
 
-Install required dependencies:
+### 1. Clone the repo
+```bash
+git clone https://github.com/wilsondhanamarthen/quant-portfolio-analysis.git
+cd quant-portfolio-analysis
+```
+
+### 2. Install dependencies
+```bash
 pip install -r requirements.txt
+```
+
+### 3. Run the project
+```bash
+python main.py
+```
+
+Charts will automatically open in your browser as interactive `.html` files.
 
 ---
 
-## Running the Project
+## 🛠️ Tech Stack
 
-Run the script with:
-python market_risk_analysis.py
-
-The program will:
-
-1. Download market data
-2. Calculate financial risk metrics
-3. Print the results table
-4. Display risk visualizations
+- **Python 3.12**
+- **yfinance** — market data
+- **numpy / pandas** — data processing
+- **scipy** — portfolio optimization
+- **plotly** — interactive visualizations
 
 ---
 
-## Technologies Used
+## 📚 Concepts Covered
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- yFinance API
-
-## Project Workflow
-
-The script follows the following workflow:
-
-1. Download historical price data using the yfinance API  
-2. Calculate log returns for each asset  
-3. Compute financial risk metrics (volatility, Sharpe ratio, VaR, etc.)  
-4. Analyze correlations between assets  
-5. Measure downside risk using drawdown analysis  
-6. Generate visualizations to illustrate market risk behavior
-
----
-## Example Output
-
-The script prints a table of financial risk metrics including:
-
-- Annual Return
-- Annual Volatility
-- Sharpe Ratio
-- Skewness
-- Kurtosis
-- Maximum Drawdown
-
-It also generates visualizations for:
-
-- Rolling volatility
-- Drawdown over time
-- Return distribution
-
-## Author
-
-Wilson Dhana Marthen
-
-This project was created as a learning exercise in quantitative finance and financial data analysis using Python.
+- Log returns vs simple returns
+- Sharpe ratio with risk-free rate adjustment
+- Historical vs Parametric Value at Risk
+- Maximum drawdown calculation
+- Rolling volatility (square root of time rule)
+- Momentum signal generation and backtesting
+- Mean-variance portfolio optimization (Markowitz)
 
 ---
 
-## Project Purpose
+## 👤 Author
 
-This project demonstrates how Python can be used to analyze financial market risk and compute common metrics used in quantitative finance and portfolio management.
+**Wilson Dhana Marthen**
+Foundation Year Student → Financial Mathematics @ XJTLU
+Aspiring Quant Trader/Researcher
+
+[![GitHub](https://img.shields.io/badge/GitHub-wilsondhanamarthen-black?logo=github)](https://github.com/wilsondhanamarthen)
