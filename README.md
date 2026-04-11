@@ -68,8 +68,7 @@ quant-portfolio-analysis/
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/wilsondhanamarthen/quant-portfolio-analysis.git
-cd quant-portfolio-analysis
+git clone https://github.com/wilsondhanamarthen/quant-risk-portfolio.git
 ```
 
 ### 2. Install dependencies
