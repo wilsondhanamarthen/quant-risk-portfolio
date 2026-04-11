@@ -111,7 +111,5 @@ Charts will automatically open in your browser as interactive `.html` files.
 ## 👤 Author
 
 **Wilson Dhana Marthen**
-Foundation Year Student → Financial Mathematics @ XJTLU
 Aspiring Quant Trader/Researcher
 
-[![GitHub](https://img.shields.io/badge/GitHub-wilsondhanamarthen-black?logo=github)](https://github.com/wilsondhanamarthen)
