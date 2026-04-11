@@ -110,5 +110,5 @@ Charts will automatically open in your browser as interactive `.html` files.
 ## 👤 Author
 
 **Wilson Dhana Marthen**
-Aspiring Quant Trader/Researcher
+Aspiring Quant 
 
