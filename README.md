@@ -9,7 +9,7 @@ using real financial mathematics.
 ## 🔍 Overview
 
 This project performs a full quantitative risk analysis on 5 major U.S. equities:
-**SPY, AAPL, MSFT, GOOGL, AMZN** using daily price data from 2015 to 2024.
+**SPY, AAPL, MSFT, GOOGL, AMZN** using daily price data from 2010 to 2025.
 
 It goes beyond simple analysis by implementing a **momentum trading strategy backtest**
 and a **minimum variance portfolio optimizer** — core concepts in quantitative finance.
