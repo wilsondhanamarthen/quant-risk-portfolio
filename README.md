@@ -1,4 +1,4 @@
-# 📈 Quant Portfolio Analysis
+# 📈 Quant Risk Portfolio 
 
 Quantitative risk and performance analysis of U.S. equities using Python.
 Built to analyze, backtest, and optimize a portfolio of major stocks
@@ -31,7 +31,7 @@ and a **minimum variance portfolio optimizer** — core concepts in quantitative
 ## 📁 Project Structure
 
 ```
-quant-portfolio-analysis/
+quant-risk-portfolio/
 ├── main.py              # Entry point — runs everything
 ├── data.py              # Downloads and processes price data
 ├── metrics.py           # Computes all risk & performance metrics
