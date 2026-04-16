@@ -51,7 +51,7 @@ def plot_drawdown(drawdown):
 def plot_cumulative_returns(cumulative):
     fig = px.line(
         cumulative,
-        title="Cumulative Returns (2015-2024)",
+        title="Cumulative Returns (2010-2025)",
         labels={"value": "Growth of $1", "variable": "Ticker"},
         color_discrete_sequence=COLORS,
         template="plotly_dark"
@@ -76,7 +76,7 @@ def plot_return_distribution(returns):
             ),
             row=1, col=i+1
         )
-    fig.update_layout(
+    fig.update_layout( 
         title="Return Distributions",
         template="plotly_dark",
         showlegend=False,
@@ -164,3 +164,5 @@ def plot_min_variance_weights(weights):
     )
     fig.write_html("min_variance_weights.html")
     fig.show()
+
+    
