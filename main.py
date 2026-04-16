@@ -48,6 +48,7 @@ def main():
 
     print("\n✅ All charts saved as .html files!")
     print("💡 Open them in your browser to interact!")
+    print(results.round(4)) 
 
 if __name__ == "__main__":
     main()
