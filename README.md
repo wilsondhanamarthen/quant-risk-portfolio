@@ -42,22 +42,24 @@ quant-risk-portfolio/
 
 ---
 
-## 📉 Key Findings (2010–2025)
+## 📌 Key Findings
 
-| Ticker | Annual Return | Sharpe Ratio | Max Drawdown |
-|--------|--------------|--------------|--------------|
-| AAPL   | 24.4%        | 0.698        | -45.9%       |
-| AMZN   | 23.3%        | 0.561        | -61.9%       |
-| MSFT   | 19.3%        | 0.561        | -40.6%       |
-| SPY    | 12.8%        | 0.457        | -35.8%       |
-| GOOGL  | 16.7%        | 0.428        | -47.9%       |
+| Ticker | Annual Return | Annual Volatility | Sharpe Ratio | Max Drawdown |
+|--------|--------------|------------------|--------------|--------------|
+| AAPL   | 24.44%       | 27.87%           | 0.70         | -45.94%      |
+| AMZN   | 23.31%       | 32.65%           | 0.56         | -61.89%      |
+| MSFT   | 19.34%       | 25.58%           | 0.56         | -40.61%      |
+| GOOGL  | 16.66%       | 27.26%           | 0.43         | -47.95%      |
+| SPY    | 12.82%       | 17.10%           | 0.46         | -35.75%      |
 
-**Momentum Strategy vs Buy & Hold SPY:**
+---
 
-| Strategy | Sharpe Ratio | Max Drawdown |
-|----------|--------------|--------------|
-| Buy & Hold SPY | 0.457 | -35.8% |
-| Momentum Strategy | 0.323 | -13.6% |
+## 📈 Strategy Comparison: Momentum vs Buy & Hold
+
+| Strategy              | Annual Return | Volatility | Sharpe Ratio | Max Drawdown |
+|----------------------|--------------|------------|--------------|--------------|
+| Buy & Hold (SPY)     | 12.82%       | 17.10%     | 0.46         | -35.75%      |
+| Momentum Strategy    | 8.38%        | 10.46%     | 0.32         | -13.60%      |
 
 > The momentum strategy underperforms on raw returns but significantly
 > reduces drawdown — showing the classic risk/return tradeoff in action.
