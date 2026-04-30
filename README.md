@@ -64,7 +64,7 @@ quant-risk-portfolio/
 **Insight:**  
 The momentum strategy significantly reduces drawdowns, but at the cost of lower returns and weaker risk-adjusted performance.
 
----
+
 
 
 ---
