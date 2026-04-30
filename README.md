@@ -42,7 +42,7 @@ quant-risk-portfolio/
 
 ---
 
-## 📉 Key Findings (2015–2024)
+## 📉 Key Findings (2010–2025)
 
 | Ticker | Annual Return | Sharpe Ratio | Max Drawdown |
 |--------|--------------|--------------|--------------|
