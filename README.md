@@ -61,8 +61,11 @@ quant-risk-portfolio/
 | Buy & Hold (SPY)     | 12.82%       | 17.10%     | 0.46         | -35.75%      |
 | Momentum Strategy    | 8.38%        | 10.46%     | 0.32         | -13.60%      |
 
-> The momentum strategy underperforms on raw returns but significantly
-> reduces drawdown — showing the classic risk/return tradeoff in action.
+**Insight:**  
+The momentum strategy significantly reduces drawdowns, but at the cost of lower returns and weaker risk-adjusted performance.
+
+---
+
 
 ---
 
